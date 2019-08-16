@@ -8,7 +8,6 @@ class TicTacToe:
     def drawBoard(self):
     # This method prints out the board with current plays adjacent to a board with index.
 
-#write some code here
         print(' %c | %c | %c '%(self.board[7],self.board[8],self.board[9]))
         print('-----------')
         print(' %c | %c | %c '%(self.board[4],self.board[5],self.board[6]))
@@ -19,7 +18,6 @@ class TicTacToe:
     def boardFull(self):
     # This method checks if the board is already full and returns True. Returns false otherwise
 
-#write some code here
         if ' ' in self.board:
             return False
         else:           
@@ -27,13 +25,11 @@ class TicTacToe:
 #------------------------------------------------------------- 
     def cellIsEmpty(self, cell):
        
-#write some code here
         return self.board[cell] == ' ' 
 #------------------------------------------------------------- 
     def assignMove(self, cell,ch):
     # assigns the cell of the board to the character ch
 
-#write some code here
         self.board[cell] = ch
 #------------------------------------------------------------- 
     def whoWon(self):
@@ -67,12 +63,8 @@ class TicTacToe:
         else:
             return False
             
-            
-        
-#write some code here
 def main():
     
-    # create a game of tic tac toe
     # first create instance of tic tac toe
     TTT = TicTacToe()
     is_draw = False
@@ -106,4 +98,7 @@ def main():
         print('It was a draw.')
     else:
         print('The winner is player %c'%winner)
+        
+    input('press any key to close')
+    
 main()
