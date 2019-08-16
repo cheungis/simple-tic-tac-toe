@@ -4,7 +4,6 @@ class TicTacToe:
         self.board = [" "]*10
         self.board[0]="#"
         
-#------------------------------------------------------------- 
     def drawBoard(self):
     # This method prints out the board with current plays adjacent to a board with index.
 
@@ -14,7 +13,6 @@ class TicTacToe:
         print('-----------')
         print(' %c | %c | %c '%(self.board[1],self.board[2],self.board[3]))        
 
-#------------------------------------------------------------- 
     def boardFull(self):
     # This method checks if the board is already full and returns True. Returns false otherwise
 
@@ -22,16 +20,16 @@ class TicTacToe:
             return False
         else:           
             return True
-#------------------------------------------------------------- 
+        
     def cellIsEmpty(self, cell):
        
         return self.board[cell] == ' ' 
-#------------------------------------------------------------- 
+    
     def assignMove(self, cell,ch):
     # assigns the cell of the board to the character ch
 
         self.board[cell] = ch
-#------------------------------------------------------------- 
+        
     def whoWon(self):
     # returns the symbol of the player who won if there is a winner, otherwise it returns an empty string. 
         if self.isWinner("x"):
@@ -41,7 +39,7 @@ class TicTacToe:
         else:
             return ""
 
-#-------------------------------------------------------------   
+        
     def isWinner(self, ch):
     # Given a player's letter, this method returns True if that player has won.
         if self.board[1] == ch and self.board[2] == ch and self.board[3] == ch:
